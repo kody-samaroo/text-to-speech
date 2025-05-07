@@ -1,11 +1,12 @@
 import React from 'react'
-import './Submit.css'
-import { useState } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { useState } from 'react'
+import './Main.css'
+import Audio from './Audio.js'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 
-export default function Submit() {
+export default function Main() {
     const [text, setText] = useState("");
     const [audioUrl, setAudioUrl] = useState(null);
 
@@ -48,10 +49,9 @@ export default function Submit() {
   </Form>
 
   {audioUrl && (
-        <div className="audio-player">
-          <h3>Listen to the result:</h3>
-          <audio controls src={audioUrl} />
-        </div>
+      <Audio
+        audioUrl={audioUrl}
+      />
       )}
   </div>
   )
