@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import './Main.css'
-import Audio from './Audio.js'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
@@ -49,9 +48,12 @@ export default function Main() {
   </Form>
 
   {audioUrl && (
-      <Audio
-        audioUrl={audioUrl}
-      />
+    <div className="d-flex justify-content-center mt-5">
+    <audio controls>
+        <source src={audioUrl} type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
+    </div>
       )}
   </div>
   )
