@@ -7,4 +7,4 @@ The goal of this application is to create audio bits for long compositions of te
 
 ### Flow Diagram
 
-![Alt text](/images/flow_diagrampdn.png)
+![Flow Diagram](images/flow_diagram.png)
